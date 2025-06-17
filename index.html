@@ -155,15 +155,18 @@
     </div>
   </header>
 
-  <nav class="navbar">
-  <a href="#" onclick="loadContent('home')">Home</a>
-  <a href="#" onclick="loadContent('about')">About Us</a>
-  <a href="#" onclick="loadContent('imrc')">IMRC-2025</a>
-  <a href="#" onclick="loadContent('policy')">Publication Policy</a>
-  <a href="#" onclick="loadContent('guidelines')">Authors' Guidelines</a>
-  <a href="#" onclick="loadContent('submit')">Submit Your Paper</a>
-  <a href="#" onclick="loadContent('gallery')">Photo Gallery</a>
-  <a href="#" onclick="loadContent('contact')">Contact</a>
+<nav class="navbar">
+  <div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
+  <div class="nav-links" id="nav-links">
+    <a href="#" onclick="loadContent('home')">Home</a>
+    <a href="#" onclick="loadContent('about')">About Us</a>
+    <a href="#" onclick="loadContent('imrc')">IMRC-2025</a>
+    <a href="#" onclick="loadContent('policy')">Publication Policy</a>
+    <a href="#" onclick="loadContent('guidelines')">Authors' Guidelines</a>
+    <a href="#" onclick="loadContent('submit')">Submit Your Paper</a>
+    <a href="#" onclick="loadContent('gallery')">Photo Gallery</a>
+    <a href="#" onclick="loadContent('contact')">Contact</a>
+  </div>
 </nav>
 
 <div class="main-content" id="main-content">
@@ -258,7 +261,13 @@ Authors must adhere to ethical guidelines, including appropriate citation and av
 
   document.getElementById('main-content').innerHTML = content;
 }
+<script>
+function toggleMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('show');
+}
 </script>
+
 
 </body>
 </html>
