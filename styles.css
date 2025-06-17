@@ -93,6 +93,9 @@ header p {
   height: 400px;
   overflow: hidden;
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 .slide {
   position: absolute;
   top: 0;
